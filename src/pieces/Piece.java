@@ -1,4 +1,7 @@
 package pieces;
+
+import constants.*;
+import java.util.*;
 import java.awt.image.BufferedImage;
 
 /**
@@ -6,25 +9,32 @@ import java.awt.image.BufferedImage;
  */
 public abstract class Piece {
 
-    protected int color;
-    protected int piece;
+    protected Color color;
+    protected PieceType type;
     protected BufferedImage image;
     protected int pointValue;
     protected boolean isPromotionPiece;
+    protected HashSet<int[]> legalSquares;
     
-    public Piece() {
-        
+    public Piece(Color color, PieceType type, BufferedImage image, int pointValue, boolean isPromotionPiece) {
+        this.color = color;
+        this.type = type;
+        this.image = image;
+        this.pointValue = pointValue;
+        this.isPromotionPiece = isPromotionPiece;
     }
 
-    public int getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public int getPiece() {
-        return piece;
+    public PieceType getType() {
+        return type;
     }
 
-    public abstract void getLegalSquares();
+    public HashSet<int[]> getLegalSquares() {
+        return legalSquares;
+    }
     
 
 }
