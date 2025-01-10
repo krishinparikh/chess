@@ -2,9 +2,7 @@ package pieces;
 
 import constants.*;
 import java.util.*;
-
 import javax.imageio.ImageIO;
-
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
