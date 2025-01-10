@@ -1,3 +1,8 @@
+
+/**
+ * A chess game is a combination of a board, players, and clock.
+ * It handles most of the chess logic.
+ */
 public class ChessGame {
 
     private Board board;
@@ -11,11 +16,25 @@ public class ChessGame {
         this.white = white;
         this.black = black;
         this.clock = clock;
-        whitePlayer.setTurn(true);
-        blackPlayer.setTurn(false);
+        white.setTurn(true);
+        black.setTurn(false);
     }
 
-    
+    public Board getBoard() {
+        return board;
+    }
+
+    public White getWhite() {
+        return white;
+    }
+
+    public Black getBlack() {
+        return black;
+    }
+
+    public Clock getClock() {
+        return clock;
+    }
     
     public void findLegalMoves(boolean isWhiteTurn) {
         // foreach white piece
